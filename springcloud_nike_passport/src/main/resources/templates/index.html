@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+    <h2 th:text="欢迎来到登录页"></h2>
+
+    <form  method="post" action="http://localhost:9006/login">
+        用户名：<input type="username" name="username"/><br>
+        密    码：<input type="password" name="password"/>
+        <input type="submit" value="登录"/>
+    </form>
+    <hr>
+    <a href="https://api.weibo.com/oauth2/authorize?client_id=3702255538&response_type=code&redirect_uri=http://localhost:9006/vlogin"> 新浪微博登录 </a>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/fastdfs-client-java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_activemq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_item" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_manage" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_member" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_order" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_passport" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_payment" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_shoppingcart" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud_nike_zuul" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

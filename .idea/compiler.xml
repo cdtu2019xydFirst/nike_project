@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="fastdfs-client-java" />
+        <module name="springcloud_nike_activemq" />
+        <module name="springcloud_nike_api" />
+        <module name="springcloud_nike_common" />
+        <module name="springcloud_nike_config" />
+        <module name="springcloud_nike_eureka" />
+        <module name="springcloud_nike_item" />
+        <module name="springcloud_nike_manage" />
+        <module name="springcloud_nike_member" />
+        <module name="springcloud_nike_order" />
+        <module name="springcloud_nike_passport" />
+        <module name="springcloud_nike_payment" />
+        <module name="springcloud_nike_search" />
+        <module name="springcloud_nike_shoppingcart" />
+        <module name="springcloud_nike_zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="fastdfs-client-java" target="1.6" />
+      <module name="springcloud_nike_activemq" target="1.8" />
+      <module name="springcloud_nike_api" target="1.8" />
+      <module name="springcloud_nike_common" target="1.8" />
+      <module name="springcloud_nike_config" target="1.8" />
+      <module name="springcloud_nike_eureka" target="1.8" />
+      <module name="springcloud_nike_item" target="1.8" />
+      <module name="springcloud_nike_manage" target="1.8" />
+      <module name="springcloud_nike_member" target="1.8" />
+      <module name="springcloud_nike_order" target="1.8" />
+      <module name="springcloud_nike_parent" target="1.8" />
+      <module name="springcloud_nike_passport" target="1.8" />
+      <module name="springcloud_nike_payment" target="1.8" />
+      <module name="springcloud_nike_search" target="1.8" />
+      <module name="springcloud_nike_shoppingcart" target="1.8" />
+      <module name="springcloud_nike_zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

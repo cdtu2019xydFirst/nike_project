@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springcloud_nike_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_common/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_member/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_manage/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_item/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_api/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_shoppingcart/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_passport/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_order/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_payment/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_config/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_search/pom.xml" />
+        <option value="$PROJECT_DIR$/fastdfs-client-java/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud_nike_activemq/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

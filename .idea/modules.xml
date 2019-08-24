@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/fastdfs-client-java/fastdfs-client-java.iml" filepath="$PROJECT_DIR$/fastdfs-client-java/fastdfs-client-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_activemq/springcloud_nike_activemq.iml" filepath="$PROJECT_DIR$/springcloud_nike_activemq/springcloud_nike_activemq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_api/springcloud_nike_api.iml" filepath="$PROJECT_DIR$/springcloud_nike_api/springcloud_nike_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_common/springcloud_nike_common.iml" filepath="$PROJECT_DIR$/springcloud_nike_common/springcloud_nike_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_config/springcloud_nike_config.iml" filepath="$PROJECT_DIR$/springcloud_nike_config/springcloud_nike_config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_eureka/springcloud_nike_eureka.iml" filepath="$PROJECT_DIR$/springcloud_nike_eureka/springcloud_nike_eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_item/springcloud_nike_item.iml" filepath="$PROJECT_DIR$/springcloud_nike_item/springcloud_nike_item.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_manage/springcloud_nike_manage.iml" filepath="$PROJECT_DIR$/springcloud_nike_manage/springcloud_nike_manage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_member/springcloud_nike_member.iml" filepath="$PROJECT_DIR$/springcloud_nike_member/springcloud_nike_member.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_order/springcloud_nike_order.iml" filepath="$PROJECT_DIR$/springcloud_nike_order/springcloud_nike_order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_parent/springcloud_nike_parent.iml" filepath="$PROJECT_DIR$/springcloud_nike_parent/springcloud_nike_parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_passport/springcloud_nike_passport.iml" filepath="$PROJECT_DIR$/springcloud_nike_passport/springcloud_nike_passport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_payment/springcloud_nike_payment.iml" filepath="$PROJECT_DIR$/springcloud_nike_payment/springcloud_nike_payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_search/springcloud_nike_search.iml" filepath="$PROJECT_DIR$/springcloud_nike_search/springcloud_nike_search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_shoppingcart/springcloud_nike_shoppingcart.iml" filepath="$PROJECT_DIR$/springcloud_nike_shoppingcart/springcloud_nike_shoppingcart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud_nike_zuul/springcloud_nike_zuul.iml" filepath="$PROJECT_DIR$/springcloud_nike_zuul/springcloud_nike_zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yadongjituan_nike_project.iml" filepath="$PROJECT_DIR$/yadongjituan_nike_project.iml" />
+    </modules>
+  </component>
+</project>
