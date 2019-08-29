@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:border="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>ECharts</title>
+	<!-- 引入 echarts.js -->
+	<script src="static/js/echarts.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.main{
+				width: 100%;
+				height: 90%;
+				position: absolute;
+			}
+			.quarter-div{
+				width: 50%;
+				height: 50%;
+				float: left;
+			}
+			.blue{
+				background-color: cornsilk;
+			}
+			.green{
+				background-color: cornsilk;
+			}
+			.orange{
+				background-color: cornsilk;
+			}
+			.yellow{
+				background-color: cornsilk;
+			}
+		</style>
+</head>
+<body>
+<h2 style="text-align:center; color: #ce8483" th:text="妮可平台大数据可视化"></h2>
+<h3 style="text-align:center; color: #ac2925" th:text="'统计日期为'+${time}+'日开始后的一周'"></h3>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div class="main" border:solid 10px #f00>
+	<div id="main" class="quarter-div blue"></div>
+	<div id="main1" class="quarter-div green" ></div>
+	<div id="main2" class="quarter-div orange" ></div>
+	<div id="main3" class="quarter-div yellow"></div>
+</div>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+
+    // 指定图表的配置项和数据
+    var value1 = [[${infos.get(0)}]];
+    var value2 = [[${infos.get(1)}]];
+    var value3 = [[${infos.get(2)}]];
+    var value4 = [[${infos.get(3)}]];
+    var value5 = [[${infos.get(4)}]];
+    var value6 = [[${infos.get(5)}]];
+    var value7 = [[${infos.get(6)}]];
+
+    var
+
+    option1 = {
+        title: {
+            text: 'nike平台用户日活跃数'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [value1, value2, value3, value4, value5, value6, value7],
+            type: 'line'
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option1);
+</script>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main1'));
+    var newuser1 = [[${newuser.get(0)}]];
+    var newuser2 = [[${newuser.get(1)}]];
+    var newuser3 = [[${newuser.get(2)}]];
+    var newuser4 = [[${newuser.get(3)}]];
+    var newuser5 = [[${newuser.get(4)}]];
+    var newuser6 = [[${newuser.get(5)}]];
+    var newuser7 = [[${newuser.get(6)}]];
+
+    // 指定图表的配置项和数据
+    option = {
+        title: {
+            text: 'nike平台用户新增数'
+        },
+        color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'直接访问',
+                type:'bar',
+                barWidth: '60%',
+                data:[newuser1, newuser2, newuser3, newuser4, newuser5, newuser6, newuser7]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main2'));
+
+    // 指定图表的配置项和数据
+    var newip1 = [[${newip.get(0)}]];
+    var newip2 = [[${newip.get(1)}]];
+    var newip3 = [[${newip.get(2)}]];
+    var newip4 = [[${newip.get(3)}]];
+    var newip5 = [[${newip.get(4)}]];
+    var newip6 = [[${newip.get(5)}]];
+    var newip7 = [[${newip.get(6)}]];
+
+    option = {
+        title: {
+            text: 'nike平台新增ip数'
+			+ '\n'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data:['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+        },
+        series: [
+            {
+                name:'新增ip数量',
+                type:'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {value:newip1, name:'Mon'},
+                    {value:newip2, name:'Tue'},
+                    {value:newip3, name:'Wed'},
+                    {value:newip4, name:'Thu'},
+                    {value:newip5, name:'Fri'},
+                    {value:newip6, name:'Sat'},
+                    {value:newip7, name:'Sun'}
+                ]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main3'));
+
+    // 指定图表的配置项和数据
+    var uv1 = [[${uv.get(0)}]];
+    var uv2 = [[${uv.get(1)}]];
+    var uv3 = [[${uv.get(2)}]];
+    var uv4 = [[${uv.get(3)}]];
+    var uv5 = [[${uv.get(4)}]];
+    var uv6 = [[${uv.get(5)}]];
+    var uv7 = [[${uv.get(6)}]];
+
+    option = {
+        title: {
+            text: 'nike平台用户独立登录数漏斗图',
+            subtext: '数据分析'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        toolbox: {
+            feature: {
+                dataView: {readOnly: false},
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        legend: {
+            data: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+        },
+        calculable: true,
+        series: [
+            {
+                name:'漏斗图',
+                type:'funnel',
+                left: '10%',
+                top: 60,
+                //x2: 80,
+                bottom: 60,
+                width: '80%',
+                // height: {totalHeight} - y - y2,
+                min: 0,
+                max: 100,
+                minSize: '0%',
+                maxSize: '100%',
+                sort: 'descending',
+                gap: 2,
+                label: {
+                    show: true,
+                    position: 'inside'
+                },
+                labelLine: {
+                    length: 10,
+                    lineStyle: {
+                        width: 1,
+                        type: 'solid'
+                    }
+                },
+                itemStyle: {
+                    borderColor: '#fff',
+                    borderWidth: 1
+                },
+                emphasis: {
+                    label: {
+                        fontSize: 20
+                    }
+                },
+                data: [
+                    {value: uv1, name: 'Mon'},
+                    {value: uv2, name: 'Tue'},
+                    {value: uv3, name: 'Wed'},
+                    {value: uv4, name: 'Thu'},
+                    {value: uv5, name: 'Fri'},
+                    {value: uv6, name: 'Sat'},
+                    {value: uv7, name: 'Sun'}
+                ]
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+</body>
+</html>

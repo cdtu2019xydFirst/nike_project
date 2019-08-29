@@ -59,7 +59,7 @@ public class SpringcloudNikeSearchApplicationTests {
         for (PmsSearchSkuInfo pmsSearchSkuInfo : pmsSearchSkuInfoList) {
         /*Index.Builder(null).index(null).type().id().build();
                     （数据） （库名）    （表名） （主键）*/
-            Index put = new Index.Builder(pmsSearchSkuInfo).index("nikepms").type("PmsSkuInfo").id(pmsSearchSkuInfo.getId()).build();
+            Index put = new Index.Builder(pmsSearchSkuInfo).index("nike").type("PmsSkuInfo").id(pmsSearchSkuInfo.getId()).build();
             /*上面相当于elasticsearch的put语句，下面是执行该语句*/
             jestClient.execute(put);
         }

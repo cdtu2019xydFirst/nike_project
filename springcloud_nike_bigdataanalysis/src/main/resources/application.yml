@@ -1,21 +1,18 @@
 server:
-  port: 9002
+  port: 9011
 
 spring:
   application:
-    name: springcloud-nike-manage
+    name: springcloud-nike-bigdataanalysis
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/nike_product?serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://192.168.255.140:3306/nikelog?serverTimezone=UTC&useSSL=false
   thymeleaf:
     cache: false
     mode: LEGACYHTML5
-  redis:
-    database: 0
-    host: 192.168.255.140
-    port: 6379
-    password: xyd1314521
+  mvc:
+    static-path-pattern: /static/**
 
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
@@ -28,11 +25,11 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka/
   instance:
     prefer-ip-address: true
-    instance-id: springcloud_nike_manage
+    instance-id: springcloud_nike_bigdataanalysis
 info:
-  app.name: springcloud_nike_manage
+  app.name: springcloud_nike_bigdataanalysis
   company.name: www.yadongjituan.com
-  build.artifactId: springcloud_nike_manage
+  build.artifactId: springcloud_nike_bigdataanalysis
   build.version: 0.0.1-SNAPSHOT
 
 #hystrix的超时时间

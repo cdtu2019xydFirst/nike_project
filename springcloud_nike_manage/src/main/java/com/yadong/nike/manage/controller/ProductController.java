@@ -28,21 +28,21 @@ public class ProductController {
 
     @RequestMapping(value = "/addProduct", method = RequestMethod.POST)
     @ResponseBody
-    public Result addProductInfo(@RequestBody PmsProductInfo pmsProductInfo){
+    public Result addProductInfo(@RequestBody PmsProductInfo pmsProductInfo) {
         productService.addProductInfo(pmsProductInfo);
         return new Result(true, StatusCode.OK, "添加成功");
     }
 
     @RequestMapping(value = "/getProductInfoById/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public Result getProductInfoById(@PathVariable("id") String id){
+    public Result getProductInfoById(@PathVariable("id") String id) {
         PmsProductInfo pmsProductInfo = productService.getProductInfoById(id);
         return new Result(true, StatusCode.OK, "查询成功", pmsProductInfo);
     }
 
     @RequestMapping(value = "/fileUpload", method = RequestMethod.POST)
     @ResponseBody
-    public String fileUpload(@RequestParam("file") MultipartFile multipartFile){//用二进制流的方式接收文件参数
+    public String fileUpload(@RequestParam("file") MultipartFile multipartFile) {//用二进制流的方式接收文件参数
         /*1.将图片或者音视频上传到分布式的文件存储系统*/
         /*2.将图片的存储路径返回给页面*/
         String imgUrl = PmsUploadUtil.uploadImage(multipartFile);
@@ -52,14 +52,14 @@ public class ProductController {
 
     @RequestMapping(value = "/getProductInfo", method = RequestMethod.GET)
     @ResponseBody
-    public Result getProductInfo(){
+    public Result getProductInfo() {
         List<PmsProductInfo> pmsProductInfos = productService.getProductInfo();
         return new Result(true, StatusCode.OK, "查询成功", pmsProductInfos);
     }
 
     @RequestMapping(value = "/spuSaleAttrListCheckBySku", method = RequestMethod.GET)
     @ResponseBody
-    public List<PmsProductSaleAttr> spuSaleAttrListCheckBySku(@RequestParam("skuId") String skuId, @RequestParam("productId") String productId){
+    public List<PmsProductSaleAttr> spuSaleAttrListCheckBySku(@RequestParam("skuId") String skuId, @RequestParam("productId") String productId) {
         List<PmsProductSaleAttr> pmsProductSaleAttrs = productService.spuSaleAttrListCheckBySku(skuId, productId);
         return pmsProductSaleAttrs;
     }

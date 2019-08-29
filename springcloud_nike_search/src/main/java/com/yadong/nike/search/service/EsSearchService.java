@@ -41,7 +41,7 @@ public class EsSearchService {
         String dslStr = getSearchDsl(pmsSearchParam);
 
         /*用api执行复杂查询语句*/
-        Search search = new Search.Builder(dslStr).addIndex("nikepms").addType("PmsSkuInfo").build();
+        Search search = new Search.Builder(dslStr).addIndex("nike").addType("PmsSkuInfo").build();
         SearchResult execute = null;
         try {
             execute = jestClient.execute(search);
@@ -55,8 +55,8 @@ public class EsSearchService {
             /*====================================================================================================================================*/
             PmsSearchSkuInfo source = hit.source;
             Map<String, List<String>> highlight = hit.highlight;
-            String skuName = highlight.get("skuName").get(0);
-            source.setSkuName(skuName);
+            String skuDesc = highlight.get("skuDesc").get(0);
+            source.setSkuDesc(skuDesc);
             pmsSearchSkuInfos.add(source);
         }
         System.err.println(pmsSearchSkuInfos.size());
@@ -87,7 +87,7 @@ public class EsSearchService {
         }
         //must
         if (StringUtils.isNotBlank(keyword)) {
-            MatchQueryBuilder matchQueryBuilder1 = new MatchQueryBuilder("skuName", keyword);
+            MatchQueryBuilder matchQueryBuilder1 = new MatchQueryBuilder("skuDesc", keyword);
             boolQueryBuilder.must(matchQueryBuilder1);
         }
         //query
@@ -101,12 +101,13 @@ public class EsSearchService {
         //highlight
         HighlightBuilder highlightBuilder = new HighlightBuilder();
         highlightBuilder.preTags("<span style='color: red'>");
-        highlightBuilder.field("skuName");
+        highlightBuilder.field("skuDesc");
         highlightBuilder.postTags("</span>");
         searchSourceBuilder.highlighter(highlightBuilder);
 
         //装换成JSON格式
         String dslStr = searchSourceBuilder.toString();
+        System.err.println(dslStr);
         return dslStr;
     }
 }

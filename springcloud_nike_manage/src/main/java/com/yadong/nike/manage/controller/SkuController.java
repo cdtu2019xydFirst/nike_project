@@ -1,5 +1,6 @@
 package com.yadong.nike.manage.controller;
 
+import com.yadong.nike.bean.BigDataSkuCatalog;
 import com.yadong.nike.bean.PmsSkuInfo;
 import com.yadong.nike.bean.Result;
 import com.yadong.nike.bean.StatusCode;
@@ -49,6 +50,12 @@ public class SkuController {
     public List<PmsSkuInfo> getSkuInfo(){
         List<PmsSkuInfo> pmsSkuInfos = skuInfoService.getSkuInfo();
         return pmsSkuInfos;
+    }
+
+    @RequestMapping(value = "/getAllType/{skuId}", method = RequestMethod.GET)
+    public BigDataSkuCatalog getAllType(@PathVariable("skuId") String skuId){
+         BigDataSkuCatalog bigDataSkuCatalog = skuInfoService.getAllType(skuId);
+         return bigDataSkuCatalog;
     }
 
 }
